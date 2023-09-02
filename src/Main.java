@@ -10,7 +10,7 @@ public class Main {
     //Задача 1
 
     public static void findLeapYear(int leapYear) {
-        if (leapYear % 4 == 0) {
+        if (leapYear % 4 == 0 && leapYear % 100 != 0 || leapYear % 400 == 0) {
             System.out.println(leapYear + " год - високосный год");
         } else {
             System.out.println(leapYear + " год - невисокосный год");
@@ -20,7 +20,7 @@ public class Main {
     public static void task1() {
         System.out.println("\n Задача 1 \n");
 
-        int year = 2024;
+        int year = 2000;
         findLeapYear(year);
     }
 
