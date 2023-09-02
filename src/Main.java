@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     //Задача 1
@@ -45,5 +46,27 @@ public class Main {
         int deviceYear = 2023;
         int deviceOS = 0;
         whichVersion(deviceOS, deviceYear);
+    }
+
+    //Задача 3
+
+    public static void deliveryTime(int distance) {
+        int time = 1;
+        if (distance <= 20) {
+            System.out.println("Потребуется " + time + " день \n");
+        } else if (distance >= 20 && distance < 60){
+            System.out.println("Потребуется " + time * 2 + " дня \n");
+        } else if (distance >= 60 && distance <= 100) {
+            System.out.println("Потребуется " + time * 3 + " дня \n");
+        } else if (distance > 100) {
+            System.out.println("Свыше 100км доставки нет \n");
+        }
+    }
+
+    public static void task3() {
+        System.out.println("\n Задача 3 \n");
+
+        int distance = 11;
+        deliveryTime(distance);
     }
 }
